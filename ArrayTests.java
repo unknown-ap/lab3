@@ -38,11 +38,32 @@ public class ArrayTests {
     assertArrayEquals(new int[]{5, 30, 50}, ArrayExamples.reversed(input1));
   }
 
+  //mytest
   @Test
   public void testReversedFive() {
     int[] input1 = {50, 30, 5, 90, 7};
     assertArrayEquals(new int[]{7, 90, 5, 30, 50}, ArrayExamples.reversed(input1));
   }
 
+  @Test
+  public void testAverageWithoutLowest() {
+    double[] input = {8, -4, 10, 5.5, 4};
+    double av = ArrayExamples.averageWithoutLowest(input);
+    assertEquals(6.875, av, .00001);
+  }
+
+  @Test
+  public void testAverageWithoutLowestTwo() {
+    double[] input = {8, -4, 10, 5.5, -10};
+    double av = ArrayExamples.averageWithoutLowest(input);
+    assertEquals(4.875, av, .00001);
+  }
+
+  @Test
+  public void testAverageWithoutLowestThree() {
+    double[] input = {-5, -5, 10, 6, 4, 10};
+    double av = ArrayExamples.averageWithoutLowest(input);
+    assertEquals(7.5, av, .01);
+  }
 
 }
